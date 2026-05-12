@@ -6,7 +6,8 @@
       </div>
     </div>
     <div class="label-form" ref="labelFormRef">
-      <DataLabel ref="dataLabelRef" :detailData="detailData" :url="current.url" />
+      <DataLabel ref="dataLabelRef" :detailData="detailData" :url="current.url" @getText="getText" @addShape="addShape"
+        @drag="drag" @shapeMoveing="shapeMoveing" @shapeChange='shapeChange' @zoom="zoom" @deleteShape="deleteShape" />
       <div class="form-wrap">
         <div>
           <div class="form-list" :class="{ 'form-list-active': currentFileIndex === i }" v-for="(item, i) in formList"
