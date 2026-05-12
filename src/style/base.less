@@ -1,0 +1,73 @@
+// 全局滚动条样式 - 类似 better-scroll 风格
+
+/* Webkit 浏览器 (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &:active {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+}
+
+/* 暗色主题下的滚动条 */
+.dark,
+[data-theme='dark'] {
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    &:active {
+      background: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+/* 特定区域的滚动条样式 */
+.scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-thin {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+.scrollbar-thick {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+}
