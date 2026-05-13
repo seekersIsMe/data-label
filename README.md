@@ -1,5 +1,5 @@
 ## 本地运行
-- npm run dev:mock   demo页面路由在mock数据里面
+- npm run dev:mock  demo页面路由在mock数据里面
 ## 技术栈
 1. 主要是对canvas-to-mark进行二次改造，交互要求有点不一样
 2. better-scroll主要是为了实现左侧图片标注框点击后和右侧的数据表单内容连线滚动，右侧数据表单点击后也可以和左侧的标注数据框进行连线交互
